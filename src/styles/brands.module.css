@@ -1,0 +1,38 @@
+.brands {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.brands ul {
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.brands ul li {
+  text-align: center;
+  padding: 4px;
+}
+
+.brands ul li h3 {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.brands ul li p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  word-spacing: 2px;
+}
+.brands ul li div {
+  overflow: hidden;
+  border-radius: 2%;
+  margin-bottom: 24px;
+}

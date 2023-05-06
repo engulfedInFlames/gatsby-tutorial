@@ -1,0 +1,28 @@
+.home {
+  user-select: none;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+
+.home div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home div h1 {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.home div h3 {
+  font-size: 40px;
+}
+
+.home img {
+  object-fit: cover;
+  width: 100%;
+}
