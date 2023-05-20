@@ -12,12 +12,28 @@ module.exports = {
     title: "Learning Gatsby",
     description: "",
     copyright: `${new Date().getFullYear()} Learning Gatsby`,
-    contact: "hello-gatsby@foo.com",
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`, // Needed for dynamic images
-    `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
+        name: `images`,
         path: `${__dirname}/src/images/`,
       },
     },

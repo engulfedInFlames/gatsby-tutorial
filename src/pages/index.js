@@ -1,9 +1,8 @@
 import * as React from "react";
-
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import * as homeStyles from "../styles/home.module.css";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
 
 export default function home({ data }) {
   const image = getImage(data.file.childImageSharp.gatsbyImageData);

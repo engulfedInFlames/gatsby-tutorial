@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as brandDetailStyles from "../styles/brand-detail.module.css";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
+import * as brandDetailStyles from "../styles/brand-detail.module.css";
 
 export default function BrandDetail({ data }) {
   const { html } = data.markdownRemark;
